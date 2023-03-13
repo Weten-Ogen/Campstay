@@ -5,7 +5,7 @@ import ProfilePage from "./ProfilePage";
 import FriendsPage from "./FriendsPage";
 import VideosPage from "./VideosPage";
 import CoverPage from "./CoverPage";
+import Settings from './Settings'
 
 
-
-export   {HomePage,CoverPage, LoginPage, SignUpPage, ProfilePage,FriendsPage,VideosPage};
+export   {HomePage,Settings,CoverPage, LoginPage, SignUpPage, ProfilePage,FriendsPage,VideosPage};
