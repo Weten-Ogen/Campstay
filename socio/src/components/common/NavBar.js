@@ -1,33 +1,38 @@
-import {Link} from 'react-router-dom'
-
+import {Link} from 'react-router-dom';
+import {BsPersonCircle,BsChatText, } from 'react-icons/bs';
+import {AiOutlineNotification} from 'react-icons/ai';
+import { ProfilePic } from '../post';
 
 export const NavBar = () => {
   return (
-  <div className='flex mb-4 object-contain items-center justify-between'>
+  <div className='flex shadow-md bg-gradient-to-r from-blue-600 to-blue-400 justify-between  object-contain items-center  mb-6'>
+    <div className='sm:w-' >
     <img 
-    className=' h-[10vh] w-[15vw] px-0 outline-none object-cover '
+    className=' w-[5vw] object-cover '
     src='logo.svg' 
     alt='logo.svg'/>
+    </div>
 
-    <input 
-    type='text' 
+    <div className='hidden  sm:block w-max-sm drop-shadow-md mix-blend-lighten ml-10'>
+      <input 
+        type='text' 
+        placehoder="Search for friends,post or video"
+        className='w-[30vw]  sm:w-[50vw] block border border-red-black px-2 py-1 rounded-full text-black text-md  ' />
+    </div>
 
-    placehoder='Search for friends,post or video'
-    className='h-[10px] border border-red-black  rounded-full p-4 m-4  text-black text-sm w-[30vw]' />
-
-    <div className='flex items-center justify-between ml-2' >
-      <div className='flex capitalize items-center justify-between px-auto '>
-        <Link className='px-3'>homepage</Link>
-        <Link>timeline</Link>
+    <div className='flex  items-center justify-betweeen  object-contain ' >
+      <div className='hidden capitalize items-start justify-between text-slate-600 text-sm mix-blend-darken '>
+        <Link className='inline-block px-1'>homepage</Link>
+        <Link className='inline-block '>timeline</Link>
       </div>
-      <div className='px-auto '>
-        
+      <div className='flex items-center justify-between text-slate-800 text-xl mx-auto'>
+        <BsPersonCircle  />
+        <BsChatText />
+        <AiOutlineNotification  />
       </div>
-
-      <img 
-      className='h-[42px] mr-3 object-cover rounded-full'
-      src='profile-pic.jpg' 
-      alt='profile_picture'/>
+      <div >
+        <ProfilePic/>
+      </div>
     </div>
   </div>
   )

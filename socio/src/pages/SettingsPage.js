@@ -1,23 +1,27 @@
 import SettingLink from "../components/setting/SettingLink"
 import {AiOutlineMenu} from 'react-icons/ai'
 import { Link } from "react-router-dom"
+import {MdRssFeed} from 'react-icons/md'
+import {BsChatText,BsPerson} from 'react-icons/bs'
+import {FaUserFriends} from 'react-icons/fa'
+import {FiSettings} from 'react-icons/fi'
 
 
 const Settings = () => {
   return (
-    <div className="mx-2 border boder-black">
+    <div className=" border boder-black">
       <SettingLink 
-        icon={<AiOutlineMenu px-2/>} name='menu' />
+        icon={<MdRssFeed/>} name='feed' />
       <SettingLink 
-       icon={<AiOutlineMenu px-2/>} name='menu' />
+       icon={<BsChatText/>} name='chat' />
       <SettingLink 
-       icon={<AiOutlineMenu px-2/>} name='menu' />
+       icon={<FaUserFriends/>} name='groups' />
       <SettingLink 
-       icon={<AiOutlineMenu px-2/>} name='menu' />
+       icon={<BsPerson/>} name='friends' />
       <SettingLink 
-       icon={<AiOutlineMenu px-2/>} name='menu' />
+       icon={<FiSettings/>} name='settings' />
       <SettingLink 
-       icon={<AiOutlineMenu px-2/>} name='menu' />
+       icon={<AiOutlineMenu/>} name='menu' />
       <Link 
       className="inline-block mx-2 my-3  text-[12px] capitalize  bg-black/10 
       rounded-md py-[12px] px-[32px]"

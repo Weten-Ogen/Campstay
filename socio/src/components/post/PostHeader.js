@@ -1,21 +1,24 @@
-import React from 'react'
+import {ProfilePic} from '../post/index'
+import SettingLink from '../setting/SettingLink'
 
 const PostHeader = () => {
   return (
-    <header className='max-w-xl border w-full px-2 py-2'>
-      <div className='max-w-lg flex flex-col   relative   items-center'>
-        <input 
-        className=' text-xl relative left-[-60px] capitalize border-none py-5'
-        type='text'
-        placeholder='what is on your mind ?'
-        
-        />
-        <img 
-        className='absolute inline-block mx-0 my-auto inset-0 h-[60px] object-cover rounded-full'
-         src='profile-pic.jpg' 
-         alt='profile-pic'/>
+    <header className='max-w-xl border w-full px-1 mb-5
+    shadow-md rounded-md '>
+      <div className='max-w-lg flex flex-col relative   items-center pt-5'>
+        <div className='relative top-2 left-12 w-full'>
+          <input 
+          className='text-lg max-w-md  relative  capitalize  px-5 py-5 w-ful'
+          type='text'
+          placeholder='what is on your mind ?'
+          
+          />
+        </div>
+       <div className='inline-block pt-5   absolute inset-0  left-1 my-3'>
+        <ProfilePic/>
+       </div>
       </div>
-      <hr className='w-full h-[2px] my-4'/>
+      <hr className='w-full h-[2px] my-6'/>
     </header>
   )
 }
