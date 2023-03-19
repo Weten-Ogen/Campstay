@@ -1,42 +1,40 @@
-import React from 'react'
-import {AiOutlineMenu,AiOutlineFacebook} from "react-icons/ai";
-import {BsHouse, BsCameraVideo } from "react-icons/bs"
-import {Link} from 'react-router-dom'
- 
-const NavLink = [
-  {id:1, name:'home', icons: <BsHouse/>},
-  {id:2, name:'video', icons: <BsCameraVideo/>},
-  {id:3, name:'feeds', icons: <AiOutlineFacebook/>},
-]
+import {Link} from 'react-router-dom';
+import {BsPersonCircle,BsChatText, } from 'react-icons/bs';
+import {AiOutlineNotification} from 'react-icons/ai';
+import { ProfilePic } from '../post';
 
 export const NavBar = () => {
   return (
-    <div className='flex w-full items-center m-3 p-2 flex-contain md:w-[40%] bg-black/60 shadow ml-[20%] border rounded-md h-[10vh]'>
-        <AiOutlineMenu  className='fixed'/>
-         <div className='ml-auto flex text-xl items-center '>
-         {
-          NavLink.map(({id,name,icons}) => {
-            return (
-              <span 
-              key={id} 
-              className='px-2'>
-                <div className='flex items-center max-w-sm'>
-                  <Link
-                  className='flex items-center hover:ring  hover:ring-red-600  text-white outline-none rounded-md' 
-                  to={`/${name}`}>{icons}
-                    <span
-                    className='m-1 hidden sm:block text-xl'
-                    >
-                    {name}
-                    </span>
-                  </Link>
-                </div>
-              </span>
-            )
-          })
-        }
-         </div>
+  <div className='flex shadow-md bg-gradient-to-r from-blue-600 to-blue-400 justify-between  object-contain items-center  mb-6'>
+    <div className='sm:w-' >
+    <img 
+    className=' w-[5vw] object-cover '
+    src='logo.svg' 
+    alt='logo.svg'/>
+    </div>
+
+    <div className='hidden  sm:block w-max-sm drop-shadow-md mix-blend-lighten ml-10'>
+      <input 
+        type='text' 
+        placehoder="Search for friends,post or video"
+        className='w-[30vw]  sm:w-[50vw] block border border-red-black px-2 py-1 rounded-full text-black text-md  ' />
+    </div>
+
+    <div className='flex  items-center justify-betweeen  object-contain ' >
+      <div className='hidden capitalize items-start justify-between text-slate-600 text-sm mix-blend-darken '>
+        <Link className='inline-block px-1'>homepage</Link>
+        <Link className='inline-block '>timeline</Link>
       </div>
+      <div className='flex items-center justify-between text-slate-800 text-xl mx-auto'>
+        <BsPersonCircle  />
+        <BsChatText />
+        <AiOutlineNotification  />
+      </div>
+      <div >
+        <ProfilePic/>
+      </div>
+    </div>
+  </div>
   )
 }
 
